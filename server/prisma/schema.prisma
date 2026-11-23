@@ -1,0 +1,187 @@
+// ─────────────────────────────────────────────────────────────
+// DineFlow database schema (PostgreSQL + Prisma)
+//
+// Multi-tenant design:
+//   • A "Restaurant" is a tenant. All private restaurant data hangs
+//     off a restaurantId and MUST be queried through the tenant
+//     middleware (server/src/middleware/tenant.ts).
+//   • A "User" can belong to one or more restaurants through
+//     "RestaurantMembership", which carries the user's role there.
+//   • Platform-wide roles (SUPER_ADMIN) live on the User and can
+//     never be set through the public API.
+//
+// After changing this file run:  npm run db:migrate
+// ─────────────────────────────────────────────────────────────
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// Platform-level role. SUPER_ADMIN is reserved for the DineFlow operator
+/// (Super Admin Dashboard arrives in Phase 6). Never assignable via the API.
+enum PlatformRole {
+  USER
+  SUPER_ADMIN
+}
+
+/// Role of a user inside ONE restaurant.
+enum MembershipRole {
+  RESTAURANT_OWNER
+  RESTAURANT_MANAGER
+  KITCHEN_STAFF
+  WAITER
+}
+
+enum RestaurantStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+}
+
+enum RestaurantCategory {
+  CASUAL_DINING
+  FINE_DINING
+  CAFE
+  FAST_FOOD
+  HOTEL
+  FOOD_COURT
+  BAKERY
+  OTHER
+}
+
+enum SubscriptionPlan {
+  STARTER
+  GROWTH
+  ENTERPRISE
+}
+
+enum SubscriptionStatus {
+  TRIALING
+  ACTIVE
+  PAST_DUE
+  CANCELED
+  EXPIRED
+}
+
+model User {
+  id           String       @id @default(cuid())
+  name         String       @db.VarChar(100)
+  /// Always stored in lowercase.
+  email        String       @unique @db.VarChar(254)
+  /// scrypt hash — never returned by the API.
+  passwordHash String
+  platformRole PlatformRole @default(USER)
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+
+  memberships RestaurantMembership[]
+  sessions    Session[]
+
+  @@map("users")
+}
+
+model Restaurant {
+  id          String             @id @default(cuid())
+  name        String             @db.VarChar(120)
+  /// Public, URL-friendly identifier (e.g. "zaika-restaurant").
+  slug        String             @unique @db.VarChar(140)
+  category    RestaurantCategory @default(CASUAL_DINING)
+  description String?            @db.VarChar(1000)
+  logo        String?            @db.VarChar(500)
+  coverImage  String?            @db.VarChar(500)
+  phone       String?            @db.VarChar(40)
+  email       String?            @db.VarChar(254)
+  address     String?            @db.VarChar(300)
+  /// ISO 3166-1 alpha-2 country code, e.g. "BD".
+  country     String             @db.VarChar(2)
+  /// ISO 4217 currency code, e.g. "BDT".
+  currency    String             @db.VarChar(3)
+  /// IANA timezone, e.g. "Asia/Dhaka".
+  timezone    String             @db.VarChar(64)
+  status      RestaurantStatus   @default(ACTIVE)
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @updatedAt
+
+  memberships    RestaurantMembership[]
+  settings       RestaurantSettings?
+  subscription   Subscription?
+  activeSessions Session[]
+
+  @@index([status])
+  @@map("restaurants")
+}
+
+model RestaurantMembership {
+  id           String         @id @default(cuid())
+  userId       String
+  restaurantId String
+  role         MembershipRole
+  createdAt    DateTime       @default(now())
+
+  user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+
+  /// A user has at most one role per restaurant.
+  @@unique([userId, restaurantId])
+  @@index([restaurantId])
+  @@map("restaurant_memberships")
+}
+
+model RestaurantSettings {
+  id            String   @id @default(cuid())
+  restaurantId  String   @unique
+  /// Percentage, e.g. 7.50 = 7.5 %
+  taxRate       Decimal  @default(0) @db.Decimal(5, 2)
+  /// Percentage, e.g. 10.00 = 10 %
+  serviceCharge Decimal  @default(0) @db.Decimal(5, 2)
+  /// { "mon": { "closed": false, "open": "09:00", "close": "22:00" }, ... }
+  openingHours  Json?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+
+  @@map("restaurant_settings")
+}
+
+model Subscription {
+  id           String             @id @default(cuid())
+  restaurantId String             @unique
+  plan         SubscriptionPlan   @default(STARTER)
+  status       SubscriptionStatus @default(TRIALING)
+  trialEndsAt  DateTime?
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+
+  @@index([status, trialEndsAt])
+  @@map("subscriptions")
+}
+
+/// Server-side login sessions. The browser only holds a random token in an
+/// HTTP-only cookie; we store its SHA-256 hash here (never the raw token).
+model Session {
+  id                 String   @id @default(cuid())
+  tokenHash          String   @unique @db.Char(64)
+  userId             String
+  /// Restaurant the user is currently working in (tenant context).
+  activeRestaurantId String?
+  ipAddress          String?  @db.VarChar(64)
+  userAgent          String?  @db.VarChar(300)
+  expiresAt          DateTime
+  lastUsedAt         DateTime @default(now())
+  createdAt          DateTime @default(now())
+
+  user             User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  activeRestaurant Restaurant? @relation(fields: [activeRestaurantId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("sessions")
+}

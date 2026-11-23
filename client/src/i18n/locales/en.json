@@ -1,0 +1,706 @@
+{
+  "brand": {
+    "tagline": "Your Restaurant. Smarter Ordering. Better Experiences."
+  },
+  "common": {
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "startTrial": "Start Free Trial",
+    "exploreDemo": "Explore Demo",
+    "loading": "Loading…",
+    "save": "Save changes",
+    "saving": "Saving…",
+    "saved": "Changes saved",
+    "cancel": "Cancel",
+    "back": "Back",
+    "next": "Continue",
+    "close": "Close",
+    "retry": "Try again",
+    "optional": "optional",
+    "comingSoon": "Coming Soon",
+    "language": "Language",
+    "menu": "Menu",
+    "dashboard": "Dashboard",
+    "sampleData": "Sample data",
+    "phase": "Phase {n}",
+    "learnMore": "Learn more",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "soon": "Soon"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Cannot reach the server. Check your connection and try again.",
+    "fixFields": "Please fix the highlighted fields.",
+    "loadFailed": "We couldn't load this page.",
+    "required": "This field is required.",
+    "invalid": "Please enter a valid value."
+  },
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How it works",
+    "kitchen": "Kitchen",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "eyebrow": "Restaurant operating system",
+    "title": "Your Restaurant. Smarter Ordering. Better Experiences.",
+    "description": "Transform your restaurant operations with smart QR ordering, real-time kitchen coordination, table management and intelligent restaurant tools.",
+    "builtFor": "Built for",
+    "types": {
+      "restaurants": "Restaurants",
+      "cafes": "Cafés",
+      "hotels": "Hotels",
+      "fastFood": "Fast food",
+      "fineDining": "Fine dining",
+      "foodCourts": "Food courts"
+    },
+    "card": {
+      "newOrder": "New order",
+      "table": "Table {n}",
+      "items": "{n} items",
+      "sentToKitchen": "Sent to kitchen",
+      "scan": "Scan to order",
+      "noApp": "No app download needed"
+    }
+  },
+  "preview": {
+    "eyebrow": "Product preview",
+    "title": "One calm command centre for a busy floor",
+    "description": "Orders, tables, kitchen and staff in a single real-time view — designed to be read at a glance during the dinner rush.",
+    "label": "Illustrative preview with sample data",
+    "kpi": {
+      "orders": "Orders today",
+      "tables": "Tables occupied",
+      "prep": "Avg. prep time",
+      "rating": "Guest rating"
+    },
+    "chart": "Orders by hour",
+    "live": "Live orders",
+    "status": {
+      "new": "New",
+      "cooking": "Cooking",
+      "ready": "Ready",
+      "served": "Served"
+    }
+  },
+  "features": {
+    "eyebrow": "Features",
+    "title": "Everything your restaurant runs on",
+    "description": "DineFlow brings ordering, kitchen and service together so your team spends less time relaying messages and more time hosting guests.",
+    "items": {
+      "qr": {
+        "title": "Smart QR ordering",
+        "desc": "Guests scan, browse a beautiful menu and order from their table — in their own language."
+      },
+      "kitchen": {
+        "title": "Kitchen display system",
+        "desc": "Tickets arrive instantly on the kitchen screen, organised by station and priority."
+      },
+      "tables": {
+        "title": "Table management",
+        "desc": "See every table's status, merge parties and print table QR codes in seconds."
+      },
+      "waiter": {
+        "title": "Waiter dashboard",
+        "desc": "Service calls, ready dishes and bill requests reach the right waiter in real time."
+      },
+      "billing": {
+        "title": "Billing & invoicing",
+        "desc": "Tax and service charge applied automatically, with clean digital invoices."
+      },
+      "analytics": {
+        "title": "Restaurant analytics",
+        "desc": "Understand best-sellers, peak hours and table turnover without spreadsheets."
+      }
+    }
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "Live in an afternoon, not a quarter",
+    "description": "No hardware to buy. Your team uses the phones, tablets and screens you already have.",
+    "steps": {
+      "s1": {
+        "title": "Create your account",
+        "desc": "Sign up and set up your restaurant profile, currency and opening hours."
+      },
+      "s2": {
+        "title": "Build your menu",
+        "desc": "Add categories, dishes, photos, prices and customisation options."
+      },
+      "s3": {
+        "title": "Place QR codes",
+        "desc": "Generate a unique QR code for every table and print them in one click."
+      },
+      "s4": {
+        "title": "Start serving",
+        "desc": "Orders flow to the kitchen and waiters instantly. You watch it all live."
+      }
+    }
+  },
+  "qr": {
+    "eyebrow": "QR ordering",
+    "title": "A menu guests actually enjoy using",
+    "description": "Rich photos, clear prices and simple customisation turn every table into a self-service counter — while your staff stays in control.",
+    "points": {
+      "p1": "Order and re-order without waiting for a waiter",
+      "p2": "Dietary tags, spice levels and add-ons built in",
+      "p3": "Menus in English, বাংলা, हिन्दी and more",
+      "p4": "Each order is tied to the exact table automatically"
+    },
+    "phone": {
+      "greeting": "Welcome to",
+      "popular": "Popular today",
+      "add": "Add",
+      "viewCart": "View cart · {n} items",
+      "dishes": {
+        "biryani": "Kacchi Biryani",
+        "curry": "Chicken Rezala",
+        "bowl": "Grilled Salmon Bowl"
+      }
+    }
+  },
+  "management": {
+    "eyebrow": "Restaurant management",
+    "title": "Run the whole restaurant from one place",
+    "description": "Owners and managers get the clarity they need without chasing staff for updates.",
+    "items": {
+      "control": {
+        "title": "Role-based access",
+        "desc": "Owners, managers, kitchen staff and waiters each see exactly what they need."
+      },
+      "multi": {
+        "title": "Built for growth",
+        "desc": "Manage one outlet today and add more locations when you're ready."
+      },
+      "secure": {
+        "title": "Private by design",
+        "desc": "Every restaurant's data is isolated and protected by strict access rules."
+      },
+      "local": {
+        "title": "Local by default",
+        "desc": "Your currency, timezone, taxes and service charge — configured once."
+      }
+    }
+  },
+  "kitchen": {
+    "eyebrow": "Kitchen display",
+    "title": "A quieter, faster kitchen",
+    "description": "Replace shouted orders and paper tickets with a clear screen your chefs can trust.",
+    "columns": {
+      "new": "New",
+      "cooking": "Cooking",
+      "ready": "Ready"
+    },
+    "points": {
+      "p1": "Tickets colour-coded by waiting time",
+      "p2": "Bump dishes to ready with a single tap",
+      "p3": "Waiters are notified the moment food is ready"
+    },
+    "ticket": {
+      "table": "T{n}",
+      "min": "{n} min"
+    }
+  },
+  "waiter": {
+    "eyebrow": "Waiter dashboard",
+    "title": "Every table, in your pocket",
+    "description": "Waiters see who needs attention right now — calls, ready dishes and bill requests — sorted by urgency.",
+    "calls": {
+      "c1": "Table 4 is asking for the bill",
+      "c2": "2 dishes ready for Table 7",
+      "c3": "Table 12 called a waiter"
+    },
+    "points": {
+      "p1": "Fewer trips back to the pass",
+      "p2": "Faster table turnover on busy nights",
+      "p3": "Clear ownership of every table"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Simple plans that grow with you",
+    "description": "Every plan starts with a free trial. No credit card required.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "yearlySave": "2 months free",
+    "perMonth": "/month",
+    "billedYearly": "billed yearly",
+    "popular": "Most popular",
+    "custom": "Custom",
+    "contactSales": "Contact sales",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "desc": "For cafés and single-outlet restaurants getting started."
+      },
+      "growth": {
+        "name": "Growth",
+        "desc": "For busy restaurants that want the full DineFlow experience."
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "desc": "For hotels, chains and food courts with advanced needs."
+      }
+    },
+    "features": {
+      "qrMenu": "Digital QR menu & ordering",
+      "tables10": "Up to 10 tables",
+      "kds": "Kitchen display system",
+      "staff3": "3 staff accounts",
+      "support": "Email support",
+      "everythingStarter": "Everything in Starter",
+      "tablesUnlimited": "Unlimited tables",
+      "waiterApp": "Waiter dashboard",
+      "staffUnlimited": "Unlimited staff accounts",
+      "analytics": "Analytics & reports",
+      "priority": "Priority support",
+      "everythingGrowth": "Everything in Growth",
+      "multiLocation": "Multiple locations",
+      "customIntegrations": "Custom integrations",
+      "sla": "Uptime SLA",
+      "manager": "Dedicated success manager"
+    }
+  },
+  "testimonials": {
+    "eyebrow": "What restaurants say",
+    "title": "Designed with people who run kitchens",
+    "notice": "Sample testimonials — illustrative content, not real customers.",
+    "items": {
+      "t1": {
+        "quote": "Our kitchen stopped losing tickets on Friday nights. The screen just tells everyone what's next.",
+        "name": "Sample Owner",
+        "role": "Casual dining, Dhaka"
+      },
+      "t2": {
+        "quote": "Guests love ordering in Bangla. Table turnover improved and the team is far less stressed.",
+        "name": "Sample Manager",
+        "role": "Family restaurant, Chattogram"
+      },
+      "t3": {
+        "quote": "Setting up the menu and QR codes took one afternoon. Our waiters picked it up immediately.",
+        "name": "Sample Café Owner",
+        "role": "Specialty café, Sylhet"
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions, answered",
+    "items": {
+      "q1": {
+        "q": "Do guests need to install an app?",
+        "a": "No. Guests scan the table QR code with their phone camera and the menu opens in the browser."
+      },
+      "q2": {
+        "q": "What hardware do I need?",
+        "a": "None beyond what you already own. DineFlow runs on any modern phone, tablet, laptop or TV browser."
+      },
+      "q3": {
+        "q": "How long is the free trial?",
+        "a": "New restaurants get a free trial (14 days by default) with full access. No credit card is required to start."
+      },
+      "q4": {
+        "q": "Can I use my own currency and taxes?",
+        "a": "Yes. Each restaurant sets its own currency, timezone, tax rate and service charge."
+      },
+      "q5": {
+        "q": "Is my restaurant's data private?",
+        "a": "Yes. Every restaurant's data is strictly isolated, and staff only see what their role allows."
+      },
+      "q6": {
+        "q": "Which languages are supported?",
+        "a": "The interface is available in English, বাংলা and हिन्दी, with more languages planned."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk about your restaurant",
+    "description": "Tell us a little about your business and we'll help you get set up.",
+    "form": {
+      "name": "Your name",
+      "email": "Email address",
+      "restaurant": "Restaurant name",
+      "message": "How can we help?",
+      "submit": "Send message",
+      "note": "This opens your email app with the message pre-filled.",
+      "subject": "DineFlow enquiry from {name}"
+    },
+    "details": {
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Office",
+      "hours": "Support hours",
+      "hoursValue": "Sat – Thu, 9:00 – 21:00"
+    }
+  },
+  "footer": {
+    "about": "Smart QR ordering and restaurant management for modern hospitality.",
+    "product": "Product",
+    "solutions": "Solutions",
+    "company": "Company",
+    "rights": "All rights reserved.",
+    "links": {
+      "demo": "Product preview",
+      "startTrial": "Start free trial",
+      "qr": "QR ordering",
+      "kitchen": "Kitchen display",
+      "waiter": "Waiter dashboard",
+      "management": "Management",
+      "signIn": "Sign in"
+    }
+  },
+  "demo": {
+    "title": "Explore the DineFlow demo",
+    "body": "Sign in to a fully working owner dashboard for the sample restaurant “Zaika Restaurant” (Dhaka, BDT).",
+    "devCta": "Open demo dashboard",
+    "devNote": "Development mode: signs in with the seeded demo owner account.",
+    "prodBody": "Take a guided look at the product preview, or start your own free trial in under a minute.",
+    "prodCta": "View product preview"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to manage your restaurant.",
+      "submit": "Sign in",
+      "noAccount": "New to DineFlow?",
+      "createAccount": "Create an account",
+      "useDemo": "Fill in demo account",
+      "demoHint": "Development only"
+    },
+    "register": {
+      "title": "Create your account",
+      "subtitle": "Start your free trial — no credit card required.",
+      "submit": "Create account",
+      "haveAccount": "Already have an account?",
+      "passwordHint": "At least 8 characters, with a letter and a number.",
+      "planSelected": "Selected plan: {plan}"
+    },
+    "fields": {
+      "name": "Full name",
+      "email": "Email address",
+      "password": "Password"
+    },
+    "side": {
+      "quote": "Every table, every ticket, every guest — in one flow.",
+      "caption": "Trusted tools for modern restaurants"
+    }
+  },
+  "onboarding": {
+    "title": "Set up your restaurant",
+    "subtitle": "A few details and your dashboard is ready. You can change everything later.",
+    "stepOf": "Step {n} of {total}",
+    "steps": {
+      "basics": "Basics",
+      "contact": "Contact",
+      "region": "Region",
+      "review": "Review"
+    },
+    "fields": {
+      "name": "Restaurant name",
+      "namePlaceholder": "e.g. Zaika Restaurant",
+      "category": "Restaurant category",
+      "phone": "Phone number",
+      "email": "Restaurant email",
+      "address": "Address",
+      "addressPlaceholder": "Street, area, city",
+      "country": "Country",
+      "currency": "Currency",
+      "timezone": "Timezone"
+    },
+    "review": "Please check your details before creating the restaurant.",
+    "trial": "Your free trial starts today.",
+    "submit": "Create restaurant",
+    "creating": "Creating your restaurant…"
+  },
+  "categories": {
+    "CASUAL_DINING": "Casual dining",
+    "FINE_DINING": "Fine dining",
+    "CAFE": "Café",
+    "FAST_FOOD": "Fast food",
+    "HOTEL": "Hotel restaurant",
+    "FOOD_COURT": "Food court",
+    "BAKERY": "Bakery & desserts",
+    "OTHER": "Other"
+  },
+  "roles": {
+    "RESTAURANT_OWNER": "Owner",
+    "RESTAURANT_MANAGER": "Manager",
+    "KITCHEN_STAFF": "Kitchen staff",
+    "WAITER": "Waiter"
+  },
+  "status": {
+    "ACTIVE": "Active",
+    "INACTIVE": "Inactive",
+    "SUSPENDED": "Suspended",
+    "TRIALING": "Free trial",
+    "PAST_DUE": "Payment due",
+    "CANCELED": "Canceled",
+    "EXPIRED": "Expired"
+  },
+  "plans": {
+    "STARTER": "Starter",
+    "GROWTH": "Growth",
+    "ENTERPRISE": "Enterprise"
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Overview",
+      "orders": "Orders",
+      "menu": "Menu Management",
+      "tables": "Tables & QR",
+      "kitchen": "Kitchen",
+      "waiters": "Waiters",
+      "customers": "Customers",
+      "billing": "Billing",
+      "analytics": "Analytics",
+      "settings": "Restaurant Settings",
+      "profile": "Account settings"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
+    },
+    "subtitle": "Here's how {restaurant} is set up today.",
+    "signedInAs": "Signed in as {role}",
+    "restaurantStatus": "Restaurant status",
+    "viewSettings": "Edit restaurant",
+    "subscription": {
+      "title": "Subscription",
+      "plan": "Plan",
+      "trialEnds": "Trial ends {date}",
+      "daysLeft": "{n} days left in your trial",
+      "dayLeft": "1 day left in your trial",
+      "trialOver": "Your trial has ended",
+      "paymentsSoon": "Online plan upgrades arrive in Phase 6."
+    },
+    "setup": {
+      "title": "Setup progress",
+      "subtitle": "{done} of {total} available steps complete"
+    },
+    "profile": {
+      "title": "Profile completion",
+      "missing": "Still missing",
+      "complete": "Your profile is complete.",
+      "fields": {
+        "name": "Name",
+        "category": "Category",
+        "description": "Description",
+        "logo": "Logo",
+        "coverImage": "Cover image",
+        "phone": "Phone",
+        "email": "Email",
+        "address": "Address",
+        "openingHours": "Opening hours"
+      }
+    },
+    "account": {
+      "title": "Account",
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "since": "Restaurant created",
+      "manage": "Manage account"
+    },
+    "checklist": {
+      "title": "Getting started",
+      "subtitle": "Finish these steps to get the most out of DineFlow.",
+      "items": {
+        "createAccount": "Create your DineFlow account",
+        "createRestaurant": "Create your restaurant",
+        "completeProfile": "Complete your restaurant profile",
+        "configureTaxes": "Set tax rate & service charge",
+        "setOpeningHours": "Set your opening hours",
+        "addMenu": "Add your menu",
+        "setupTables": "Set up tables & QR codes",
+        "inviteStaff": "Invite your staff"
+      },
+      "go": "Start"
+    },
+    "quick": {
+      "title": "Quick actions",
+      "editProfile": {
+        "title": "Edit restaurant profile",
+        "desc": "Name, description, images and contact details"
+      },
+      "hours": {
+        "title": "Opening hours",
+        "desc": "Tell guests and staff when you're open"
+      },
+      "charges": {
+        "title": "Taxes & charges",
+        "desc": "Configure tax rate and service charge"
+      },
+      "account": {
+        "title": "Account & security",
+        "desc": "Update your name and password"
+      },
+      "menu": {
+        "title": "Build your menu",
+        "desc": "Categories, dishes and photos"
+      },
+      "qr": {
+        "title": "Print table QR codes",
+        "desc": "One code per table"
+      }
+    },
+    "insights": {
+      "title": "Orders & revenue",
+      "empty": "Sales insights will appear here once QR ordering goes live for your restaurant. We never show estimated or sample numbers in your dashboard.",
+      "cta": "See what's coming"
+    },
+    "userMenu": {
+      "account": "Account settings",
+      "restaurant": "Restaurant settings",
+      "signOutTitle": "Sign out of DineFlow?",
+      "signOutBody": "You'll need to sign in again to access your dashboard."
+    }
+  },
+  "settings": {
+    "title": "Restaurant settings",
+    "subtitle": "Keep your restaurant information accurate — it appears on menus, invoices and your guest pages.",
+    "readOnly": "Your role can view these settings but cannot change them. Ask the restaurant owner or a manager.",
+    "sections": {
+      "general": {
+        "title": "General",
+        "desc": "How your restaurant is presented to guests."
+      },
+      "branding": {
+        "title": "Branding",
+        "desc": "Logo and cover image. Image uploads arrive in Phase 2 — for now use a gallery image or an https:// link."
+      },
+      "contact": {
+        "title": "Contact",
+        "desc": "How guests can reach you."
+      },
+      "regional": {
+        "title": "Regional",
+        "desc": "Currency and timezone used for prices and reports."
+      },
+      "charges": {
+        "title": "Taxes & charges",
+        "desc": "Applied to bills once ordering and billing are live."
+      },
+      "hours": {
+        "title": "Opening hours",
+        "desc": "Shown to guests and used to accept orders."
+      }
+    },
+    "fields": {
+      "name": "Restaurant name",
+      "category": "Category",
+      "description": "Description",
+      "descriptionPlaceholder": "A short introduction guests will see on your menu page",
+      "logo": "Logo URL",
+      "coverImage": "Cover image URL",
+      "chooseGallery": "Or choose from gallery",
+      "remove": "Remove",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "country": "Country",
+      "currency": "Currency",
+      "timezone": "Timezone",
+      "taxRate": "Tax rate (%)",
+      "serviceCharge": "Service charge (%)",
+      "slug": "Public URL name",
+      "slugHint": "Used for your guest menu link. Set automatically."
+    },
+    "hours": {
+      "closed": "Closed",
+      "open": "Open",
+      "copyToAll": "Copy Monday to all days",
+      "days": {
+        "mon": "Monday",
+        "tue": "Tuesday",
+        "wed": "Wednesday",
+        "thu": "Thursday",
+        "fri": "Friday",
+        "sat": "Saturday",
+        "sun": "Sunday"
+      },
+      "enable": "Set opening hours",
+      "notSet": "Opening hours are not set yet."
+    }
+  },
+  "profile": {
+    "title": "Account settings",
+    "subtitle": "Manage your personal details and password.",
+    "details": "Personal details",
+    "detailsDesc": "Your name is shown to your team.",
+    "name": "Full name",
+    "email": "Email address",
+    "emailHint": "Email changes will be supported in a later phase.",
+    "password": "Change password",
+    "passwordDesc": "Changing your password signs you out on all other devices.",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm new password",
+    "mismatch": "Passwords do not match",
+    "updatePassword": "Update password",
+    "passwordChanged": "Password updated. Other devices were signed out.",
+    "memberships": "Your restaurants",
+    "session": "Session",
+    "sessionDesc": "Sign out of DineFlow on this device."
+  },
+  "comingSoon": {
+    "title": "{module} is on the way",
+    "body": "This module is planned for Phase {phase} of DineFlow. The foundation — accounts, restaurants, roles and security — is ready for it.",
+    "back": "Back to overview",
+    "planned": "Planned for Phase {phase}",
+    "whatsNext": "What it will include"
+  },
+  "moduleDetails": {
+    "orders": [
+      "Live order queue from QR menus",
+      "Order status tracking",
+      "Order history and search"
+    ],
+    "menu": [
+      "Categories and dishes with photos",
+      "Prices, variants and add-ons",
+      "Availability toggles"
+    ],
+    "tables": [
+      "Table layout and capacity",
+      "Unique QR code per table",
+      "Printable QR sheets"
+    ],
+    "kitchen": [
+      "Real-time kitchen tickets",
+      "Station routing",
+      "Bump to ready"
+    ],
+    "waiters": [
+      "Service calls by table",
+      "Ready-dish notifications",
+      "Waiter assignments"
+    ],
+    "customers": [
+      "Guest reviews",
+      "Repeat guest insights",
+      "Feedback replies"
+    ],
+    "billing": [
+      "Invoices with tax and service charge",
+      "Payment methods",
+      "Daily closing reports"
+    ],
+    "analytics": [
+      "Best-selling dishes",
+      "Peak hours",
+      "Table turnover"
+    ]
+  },
+  "notFound": {
+    "title": "This page isn't on the menu",
+    "body": "The page you're looking for doesn't exist or has moved.",
+    "home": "Back to home"
+  }
+}

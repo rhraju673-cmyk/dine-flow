@@ -1,0 +1,69 @@
+/*
+ * ─────────────────────────────────────────────────────────────
+ *  DINEFLOW DESIGN TOKENS  —  change brand colors & fonts HERE.
+ * ─────────────────────────────────────────────────────────────
+ * Tailwind v4 turns every variable below into utility classes:
+ *   --color-brand   →  bg-brand, text-brand, border-brand, ring-brand …
+ *   --font-display  →  font-display
+ * Edit a value, save, and the whole app updates.
+ */
+@theme {
+  /* Backgrounds */
+  --color-bg: #080b12; /* main background */
+  --color-bg-2: #101522; /* secondary background (sidebar, sections) */
+  --color-card: #151d2d; /* cards, inputs, modals */
+  --color-card-2: #1a2436; /* hovered / raised cards */
+
+  /* Lines */
+  --color-line: #263247; /* borders */
+  --color-line-2: #33415a; /* stronger borders, hover */
+
+  /* Brand accents */
+  --color-brand: #f28c38; /* primary accent (buttons, highlights) */
+  --color-brand-2: #ffb15c; /* secondary accent (gradients, hover) */
+  --color-brand-ink: #1a0f04; /* text on top of brand color */
+
+  /* Text */
+  --color-fg: #f8fafc; /* main text */
+  --color-muted: #94a3b8; /* secondary text */
+  --color-subtle: #64748b; /* hints, placeholders */
+
+  /* Status colors */
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;
+  --color-info: #60a5fa;
+
+  /* Fonts (Bangla & Hindi fallbacks keep Unicode text beautiful) */
+  --font-sans: 'Inter Variable', 'Noto Sans Bengali', 'Noto Sans Devanagari', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces Variable', 'Noto Sans Bengali', 'Noto Sans Devanagari', Georgia, serif;
+
+  /* Radius & shadows */
+  --radius-card: 1.25rem;
+  --shadow-card: 0 1px 0 0 rgb(255 255 255 / 0.03) inset, 0 20px 40px -24px rgb(0 0 0 / 0.6);
+  --shadow-glow: 0 10px 40px -12px rgb(242 140 56 / 0.45);
+
+  /* Animations */
+  --animate-fade-up: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+}

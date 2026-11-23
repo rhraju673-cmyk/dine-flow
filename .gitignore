@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Environment files (contain secrets)
+.env
+.env.*
+!.env.example
+
+# Local embedded PostgreSQL data
+.data/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Test coverage
+coverage/
+
+# Folders prepared for GitHub web upload
+github-upload/

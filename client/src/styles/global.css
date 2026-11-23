@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+@import './theme.css';
+
+/* Base styles */
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+    text-rendering: optimizeLegibility;
+  }
+  /* Bangla & Devanagari need a little more line height */
+  :lang(bn) body,
+  :lang(hi) body {
+    line-height: 1.7;
+  }
+  ::selection {
+    background: rgb(242 140 56 / 0.35);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brand-2);
+    outline-offset: 2px;
+  }
+  input[type='time']::-webkit-calendar-picker-indicator {
+    filter: invert(0.7);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Small reusable helpers */
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+  .card {
+    @apply rounded-[var(--radius-card)] border border-line bg-card shadow-[var(--shadow-card)];
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-brand-2;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-2 to-brand bg-clip-text text-transparent;
+  }
+  .grid-pattern {
+    background-image:
+      linear-gradient(to right, rgb(38 50 71 / 0.35) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(38 50 71 / 0.35) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}

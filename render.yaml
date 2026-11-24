@@ -1,0 +1,36 @@
+# ─────────────────────────────────────────────────────────────
+# Render Blueprint — deploys DineFlow for free on https://render.com
+#
+# One Node.js web service serves BOTH the website and the API.
+# The database is NOT created here: use a free PostgreSQL from
+# https://neon.tech and paste its connection string as DATABASE_URL
+# when Render asks for it. See docs/DEPLOY_FREE.md.
+# ─────────────────────────────────────────────────────────────
+services:
+  - type: web
+    name: dineflow
+    runtime: node
+    plan: free
+    # --include=dev: TypeScript, Vite and Prisma CLI are needed to build.
+    # build:prod = prisma generate → build client & server → apply DB migrations
+    buildCommand: npm ci --include=dev && npm run build:prod
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "22"
+      - key: USE_EMBEDDED_POSTGRES
+        value: "false"
+      - key: TRIAL_DAYS
+        value: "14"
+      - key: SESSION_TTL_DAYS
+        value: "7"
+      # Render creates a long random secret automatically.
+      - key: SESSION_SECRET
+        generateValue: true
+      # You paste your Neon connection string here during setup.
+      - key: DATABASE_URL
+        sync: false

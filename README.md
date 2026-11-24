@@ -6,7 +6,7 @@ DineFlow is a multi-tenant restaurant QR ordering & management SaaS. Many indepe
 
 This repository contains **Phase 1 — Foundation**: public website, real authentication, multi-tenant database, onboarding, owner dashboard, restaurant settings, internationalization (English / বাংলা / हिन्दी) and an automated test suite.
 
-> 📘 **Feature & usage guide (English + বাংলা):** [docs/USER_GUIDE.md](docs/USER_GUIDE.md)
+> 📘 **Feature & usage guide (English + বাংলা):** [docs/USER_GUIDE.md](docs/USER_GUIDE.md) · 🚀 **Free hosting guide (Banglish):** [docs/DEPLOY_FREE.md](docs/DEPLOY_FREE.md)
 
 > Modules such as menus, tables & QR codes, live ordering, kitchen display, waiters, billing and analytics are **planned for Phases 2–6**. They appear in the dashboard as clearly-labelled "Coming Soon" pages; they are not implemented yet.
 

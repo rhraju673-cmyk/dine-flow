@@ -55,6 +55,11 @@ export const isProduction = env.NODE_ENV === 'production';
 export const isTest = env.NODE_ENV === 'test';
 
 /** Browser origins allowed to call the API (CORS + CSRF origin check). */
-export const allowedOrigins = env.CLIENT_ORIGIN.split(',')
-  .map((o) => o.trim())
+export const allowedOrigins = [
+  ...env.CLIENT_ORIGIN.split(','),
+  // Render sets this automatically to the public URL (https://<name>.onrender.com),
+  // so the live site works without editing CLIENT_ORIGIN.
+  process.env.RENDER_EXTERNAL_URL ?? '',
+]
+  .map((o) => o.trim().replace(/\/+$/, ''))
   .filter(Boolean);
